@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/views/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="submit" style="border: red 1px solid;width: 150px;">发送</div>
+
+
+<script>
+    $(function(){
+        $(".submit").click(function(){
+            $.post("http://srvinfo.sy.zxyhjoy.com:3111/lzzrPayHaiwan.php",{
+                "asyx_order_id": "testOrder：1111111118",
+                "subject": "元宝",
+                "subject_desc": "一服*哈哈哈1*1474*8",
+                "trade_status": "1",
+                "amount": "0.01",
+                "channel": "微信",
+                "order_creatdt": "2016-06-14 11:25:29",
+                "order_paydt": "2016-06-14 11:25:47",
+                "asyx_game_id": "ea005a6d-895d-4837-9358-726809eab892",
+                "pay_order_id": "2107136705691444",
+                "sign": "d3a68667dce0713e1dba8773caf417af",
+                "GameZero": "一服",
+                "Memo": "memo"
+            },function(data){
+                alert(data);
+            });
+        })
+    })
+
+
+
+</script>
+
+
+</body>
+</html>
